@@ -39,7 +39,7 @@ class RapidTable:
         self,
         img_content: Union[str, np.ndarray, bytes, Path],
         ocr_result: List[Union[List[List[float]], str, str]] = None,
-    ) -> Tuple[str, float]:
+    ) -> Tuple[str,np.ndarray, float]:
         if self.ocr_engine is None and ocr_result is None:
             raise ValueError(
                 "One of two conditions must be met: ocr_result is not empty, or rapidocr_onnxruntime is installed."
