@@ -87,9 +87,9 @@ class VisTable:
         self,
         img_path: Union[str, Path],
         table_html_str: str,
-        save_html_path: Optional[str] = None,
+        save_html_path: Optional[Union[str, Path]] = None,
         table_cell_bboxes: Optional[np.ndarray] = None,
-        save_drawed_path: Optional[str] = None,
+        save_drawed_path: Optional[Union[str, Path]] = None,
     ) -> None:
         if save_html_path:
             html_with_border = self.insert_border_style(table_html_str)
